@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("bg12.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif !important;
+}
+.player {
+  background: url("dino2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 190px;
+  width: 370px;
+  position: absolute;
+  bottom: 92px;
+  left: 0;
+  transition: all .5s;
+
+}
+.player_rotate{
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+}
+.enemy {
+  background: url("dino.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 207px;
+  width: 292px;
+  position: absolute;
+  bottom: 47px;
+  right: 40vw;
+  transform: scale(0.5);
+  transition: all .5s;
+}
+.score{
+  position: absolute;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 20px;
+  /* border: 2px solid black; */
+  color: black;
+  font-weight: bold;
+  right: 5vw;
+  top: 5vh;
+  transform: scale(1.1);
+}
+.game_over {
+  color: #4b5a76;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: rgb(158, 157, 154) 1px 9px 7px;
+}
+.gameOver_Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  visibility: hidden;
+}
+.animatePlayer {
+  animation: player 0.7s linear;
+}
+.animateEnemy {
+  animation: enemy 4s linear infinite;
+  transition: 0.5s all;
+}
+
+@keyframes player {
+  0% {
+    bottom: 92px;
+  }
+  50% {
+    bottom: 452px;
+  }
+  100% {
+    bottom: 92px;
+    transition: 0.5s;
+   
+  }
+}
+@keyframes enemy {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
+  }
+}
