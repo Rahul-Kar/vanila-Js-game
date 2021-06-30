@@ -48,7 +48,6 @@ body {
   padding: 10px 20px;
   background: #fff;
   border-radius: 20px;
-  /* border: 2px solid black; */
   color: black;
   font-weight: bold;
   right: 5vw;
@@ -60,6 +59,9 @@ body {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: rgb(158, 157, 154) 1px 9px 7px;
+}
+.btn{
+  border-radius: 2rem;
 }
 .gameOver_Box {
   display: flex;
