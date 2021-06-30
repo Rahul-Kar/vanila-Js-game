@@ -61,7 +61,7 @@ body {
   text-shadow: rgb(158, 157, 154) 1px 9px 7px;
 }
 .btn{
-  border-radius: 2rem;
+  border-radius: 2rem !important;
 }
 .gameOver_Box {
   display: flex;
